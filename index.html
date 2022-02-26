@@ -9,7 +9,27 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    
+    <nav>
+        <div class="nav-logo">
+            <a href="home" class="nav-logo-wrap">
+                <img src="images/felipe-r.png" alt="Fe Logo">
+            </a>
+        </div>
+        <button class="nav-burger" onclick="sidebarToggle()">
+            <img src="images/burger-bar.png" alt="Navbar Menu">
+        </button>
+    </nav>
+    <div class="sidebar">
+        <button class="sidebar-close" onclick="sidebarToggle()">
+            <img src="images/close.png" alt="Sidebar Sair">
+        </button>
+        <div class="sidebar-links">
+            <a href="#home">Início</a>
+            <a href="#about">Quem sou</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#contacts">Contatos</a>
+        </div>
+    </div>
 <script src="script.js"></script>
 </body>
 </html>
