@@ -268,6 +268,19 @@ nav img {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+}
+
+.home-text-bg {
+    background: #121212ce;
+    position: absolute;
+    top: 0;
+    right: 20%;
+    bottom: 0;
+    left: 20%;
+    z-index: -1;
+    filter: blur(50px);
+    border-radius: 50%;
 }
 
 .home-text h1 {
@@ -309,6 +322,10 @@ nav img {
         font-size: 36px;
     }
 
+    .home-text-bg {
+        right: 0;
+        left: 0;
+    }
 }
 
 @media screen and (max-width: 450px) {
