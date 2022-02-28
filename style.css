@@ -171,7 +171,7 @@ nav img {
 }
 
 .home-bg-cover {
-    background: linear-gradient(#000000ce, #00ff1517, #000);
+    background: linear-gradient(#000000ce, #00910c1e, #000);
     position: absolute;
     top: 0;
     right: 0;
@@ -353,4 +353,108 @@ nav img {
     .home-content p {
         font-size: 22px;
     }
+}
+
+
+
+.about {
+    background: #000;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 40px;
+    padding: 0 80px;
+    z-index: 5;
+}
+
+.about h2 {
+    color: var(--secondary);
+}
+
+.about p {
+    color: var(--light-theme);
+    font-weight: 300;
+}
+
+.about-quote, .about-text {
+    width: 30%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-quote h2 {
+    font-weight: 400;
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+.about-quote p {
+    text-align: center;
+}
+
+.about-quote h2:first-child {
+    margin-bottom: 30px;
+}
+
+.about-quote h2:last-child {
+    margin-left: 240px;
+}
+
+.about-quote p {
+    position: relative;
+}
+
+.about-quote img {
+    max-width: 22px;
+    position: absolute;
+}
+
+.about-quote img:nth-child(2) {
+    top: -16px;
+    left: -20px;
+}
+
+.about-quote img:nth-child(1) {
+    transform: rotate(-180deg);
+    bottom: -4px;
+    right: -20px;
+}
+
+.about-image {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    transition: .3s;
+}
+
+.about-image:hover {
+    transform: scale(.96);
+}
+
+.about-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.about-image > a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.about-text h2 {
+    font-weight: 300;
+    font-size: 42px;
+    margin-left: 8px;
 }
