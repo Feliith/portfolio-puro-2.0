@@ -210,8 +210,8 @@ nav img {
 }
 
 .home-contacts img {
-    max-width: 30px;
-    max-height: 30px;
+    max-width: 28px;
+    max-height: 28px;
 }
 
 .social-media {
@@ -364,7 +364,6 @@ nav img {
     align-items: center;
     justify-content: space-around;
     position: relative;
-    margin-top: 40px;
     padding: 0 80px;
     z-index: 5;
 }
@@ -457,4 +456,55 @@ nav img {
     font-weight: 300;
     font-size: 42px;
     margin-left: 8px;
+}
+
+@media screen and (max-width: 1200px) {
+    .about-image {
+        width: 240px;
+        height: 240px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .about-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-quote h2:last-child {
+        margin-left: 120px;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .about {
+        flex-direction: column;
+        height: 700px;
+    }
+    .about > div {
+        width: 90%;
+    }
+    .about-image {
+        margin-top: 20px;
+        margin-bottom: -40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about {
+        padding: 32px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .about {
+        height: 820px;
+    }
+    .about-image {
+        margin-top: 60px;
+        margin-bottom: 20px;
+        width: 180px;
+        height: 180px;
+    }
 }
