@@ -536,14 +536,20 @@ nav img {
     background: var(--dark-theme);
     color: var(--light-theme);
     width: 100%;
-    height: 200px;
+    height: 220px;
     padding: 60px 80px;
 }
 
 .select-tool h1 {
     font-size: 42px;
     font-weight: 500;
-    margin-bottom: 40px;
+}
+
+.select-tool h3 {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--light-theme-hover);
+    margin-bottom: 30px;
 }
 
 .select-tool h1 strong {
@@ -556,6 +562,14 @@ nav img {
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.tool-scroll {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.tool-scroll::-webkit-scrollbar {
+    opacity: 0;
 }
 
 .tool {
@@ -595,15 +609,32 @@ nav img {
     height: 500px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .portfolio {
         overflow: hidden;
     }
-    .select-tool {
-        padding: 60px 80px;
+    .tool-slider {
+        width: 1200px;
     }
+    .select-tool {
+        padding: 60px 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .tool-slider {
+        width: 1000px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .tool-slider {
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 400px) {
     .tool-slider {
         width: 600px;
-        justify-content: space-between;
     }
 }
