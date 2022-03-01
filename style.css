@@ -587,12 +587,12 @@ nav img {
 }
 
 .tool {
-    height: 100px;
+    height: 120px;
     text-align: center;
     width: 200px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;
     flex-direction: column;
 }
 
@@ -631,8 +631,10 @@ nav img {
 
 .tool-name {
     color: #242424;
+    width: 80px;
     font-weight: 400;
     font-size: 14px;
+    margin-top: 8px;
 }
 
 .select-project {

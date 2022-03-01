@@ -87,7 +87,7 @@ const ballScrolled = () => {
     toolScroll.onscroll = ballScrolling
 
     function ballScrolling() {
-        if (toolScroll.scrollLeft < 300) {        
+        if (toolScroll.scrollLeft < 200) {        
             const ballOn = document.querySelector('.ball.on')
             ballOn.classList.remove('on')
             allBall[0].classList.add('on')
