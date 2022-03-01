@@ -373,7 +373,7 @@ nav img {
 
 .about {
     background: #000;
-    height: 500px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -511,8 +511,9 @@ nav img {
 
 @media screen and (max-width: 600px) {
     .about {
+        height: 840px;
         padding: 32px;
-        padding-top: 0;
+        padding-top: 40px;
         padding-bottom: 60px;
     }
     .about-quote h2:last-child {
@@ -521,9 +522,6 @@ nav img {
 }
 
 @media screen and (max-width: 450px) {
-    .about {
-        height: 820px;
-    }
     .about-image {
         margin-top: 60px;
         margin-bottom: 20px;
