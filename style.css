@@ -158,7 +158,7 @@ nav img {
 
 .home {
     position: relative;
-    height: 700px;
+    height: 740px;
 }
 
 .home-bg {
@@ -373,7 +373,7 @@ nav img {
 
 .about {
     background: #000;
-    height: 420px;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -486,6 +486,7 @@ nav img {
     }
 
     .about-quote h2:last-child {
+        margin-top: 34px;
         margin-left: 120px;
     }
     
@@ -494,20 +495,28 @@ nav img {
 @media screen and (max-width: 800px) {
     .about {
         flex-direction: column;
-        height: 700px;
+        height: 800px;
     }
     .about > div {
         width: 90%;
     }
     .about-image {
         margin-top: 20px;
-        margin-bottom: -40px;
+        margin-bottom: 0;
+    }
+    .about-quote h2:last-child {
+        margin-left: 340px;
     }
 }
 
 @media screen and (max-width: 600px) {
     .about {
         padding: 32px;
+        padding-top: 0;
+        padding-bottom: 60px;
+    }
+    .about-quote h2:last-child {
+        margin-left: 280px;
     }
 }
 
@@ -520,6 +529,9 @@ nav img {
         margin-bottom: 20px;
         width: 180px;
         height: 180px;
+    }
+    .about-quote h2:last-child {
+        margin-left: 140px;
     }
 }
 

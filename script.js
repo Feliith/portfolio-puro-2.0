@@ -64,10 +64,38 @@ const ballClickEvent = () => {
 ballClickEvent()
 
 const ballClick = (id) => {
+    const toolScroll = document.querySelector('.tool-scroll')
     const allBall = document.querySelectorAll('.ball')
 
     const ballOn = document.querySelector('.ball.on')
     ballOn.classList.remove('on')
 
     allBall[id].classList.add('on')
+
+    if (id == 0) {
+        toolScroll.scrollLeft = 0
+    } else if (id == 1) {
+        toolScroll.scrollLeft = 500
+    }
 }
+
+const ballScrolled = () => {
+    const toolScroll = document.querySelector('.tool-scroll')
+
+    const allBall = document.querySelectorAll('.ball')
+
+    toolScroll.onscroll = ballScrolling
+
+    function ballScrolling() {
+        if (toolScroll.scrollLeft < 300) {        
+            const ballOn = document.querySelector('.ball.on')
+            ballOn.classList.remove('on')
+            allBall[0].classList.add('on')
+        } else {
+            const ballOn = document.querySelector('.ball.on')
+            ballOn.classList.remove('on')
+            allBall[1].classList.add('on')
+        }
+    }
+}
+ballScrolled()
