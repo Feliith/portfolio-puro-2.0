@@ -698,7 +698,7 @@ nav img {
     transform: scale(1);
 }
 
-.project:hover .project-wrap h3 {
+.project:hover .tools-name {
     opacity: 1;
 }
 
@@ -720,7 +720,7 @@ nav img {
     flex-direction: column;
 }
 
-.project-wrap h3 {
+.tools-name {
     color: white;
     font-size: 14px;
     font-weight: 500;
@@ -768,6 +768,10 @@ nav img {
     margin-right: 10px;
 }
 
+.mobile-name, .mobile-tools {
+    display: none;
+}
+
 @media screen and (max-width: 1000px) {
     .portfolio {
         overflow: hidden;
@@ -807,7 +811,7 @@ nav img {
         transform: scale(1);
     }
 
-    .project:hover .project-wrap h3 {
+    .project:hover .tools-name {
         opacity: 1;
     }
 
@@ -819,7 +823,7 @@ nav img {
         border-radius: 0;
     }
 
-    .project-wrap h3 {
+    .tools-name {
         opacity: 1;
         color: #000;
         bottom: 8px;
@@ -862,25 +866,68 @@ nav img {
     }
 }
 
+@media screen and (max-width: 500px) {
+    .project {
+        height: 300px;
+    }
+
+    .project-wrap {
+        padding: 20px;
+    }
+
+    .project-image {
+        border-radius: 50%;
+        max-height: 60%;
+    }
+    
+    .project-btn-wrap {
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-around;
+        height: 60%;
+        width: 100%;
+    }
+
+    .project-btn {
+        width: 90%;
+        height: 60px;
+    }
+
+    .project-name, .tools-name {
+        display: none;
+    }
+
+    .mobile-name, .mobile-tools {
+        display: block;
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .mobile-name {
+        top: 8px;
+    }
+    
+    .mobile-tools {
+        bottom: 8px;
+    }
+}
+
 @media screen and (max-width: 400px) {
+    .project {
+        height: 200;
+    }
     .tool-slider {
         width: 600px;
     }
+    
     .project-btn {
-        font-size: 14px;
-        width: 120px;
-    }
-    .project-name {
-        left: 38%;
+        font-size: 16px;
     }
     .project-btn img {
-        max-width: 22px;
+        max-width: 20px;
         margin-right: 8px;
         margin-left: -8px;
-    }
-    .project-image {
-        max-width: 80%;
-        max-height: 80%;
-        border-radius: 50%;
     }
 }

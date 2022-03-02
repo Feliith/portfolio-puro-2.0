@@ -132,14 +132,16 @@ const projectsConteinerInit = () => {
         projectsConteiner.innerHTML += `
             <div class="project" id="${item.id}">
                 <div class="project-wrap">
+                    <h3 class="mobile-name">${item.name}</h3>
                     <img src="${item.src}" class="project-image"/>
                     <div class="project-items">
-                        <h3>${item.tools}</h3>
+                        <h3 class="tools-name">${item.tools}</h3>
                         <div class="project-btn-wrap">
                             <a href="" class="project-btn"><img src="../images/site.png"/>Site</a>
                             <a href="" class="project-btn"><img src="../images/code.png"/>Código</a>
                         </div>
                     </div>
+                    <h3 class="mobile-tools">${item.tools}</h3>
                 </div>
                 <h3 class="project-name">${item.name}</h3>
             </div>
