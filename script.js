@@ -137,8 +137,8 @@ const projectsConteinerInit = () => {
                     <div class="project-items">
                         <h3 class="tools-name">${item.tools}</h3>
                         <div class="project-btn-wrap">
-                            <a href="" class="project-btn"><img src="../images/site.png"/>Site</a>
-                            <a href="" class="project-btn"><img src="../images/code.png"/>Código</a>
+                            <a href="${item.url}" target="_blank" class="project-btn"><img src="../images/site.png"/>Site</a>
+                            <a href="${item.code}" target="_blank" class="project-btn"><img src="../images/code.png"/>Código</a>
                         </div>
                     </div>
                     <h3 class="mobile-tools">${item.tools}</h3>

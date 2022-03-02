@@ -663,12 +663,13 @@ nav img {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 80px;
+    padding: 60px;
+    padding-top: 100px;
     flex-wrap: wrap;
 }
 
 .project {
-    margin: 50px;
+    margin: 40px;
 }
 
 .project-name {
@@ -690,7 +691,7 @@ nav img {
 }
 
 .project:hover .project-image {
-    filter: brightness(60%) blur(2px);
+    filter: brightness(40%) blur(2px);
 }
 
 .project:hover .project-btn {
@@ -821,6 +822,7 @@ nav img {
         flex-direction: row;
         justify-content: space-between;
         border-radius: 0;
+        box-shadow: 0 0 3px #24242460;
     }
 
     .tools-name {
@@ -867,6 +869,10 @@ nav img {
 }
 
 @media screen and (max-width: 500px) {
+    .tool-btn.on {
+        transform: scale(.82);
+    }
+
     .project {
         height: 300px;
     }
@@ -906,11 +912,17 @@ nav img {
     }
 
     .mobile-name {
-        top: 8px;
+        top: 14px;
+        font-size: 24px;
+        font-weight: 500;
+        text-decoration: underline;
     }
     
     .mobile-tools {
-        bottom: 8px;
+        bottom: 14px;
+        color: #242424;
+        font-size: 16px;
+        font-weight: 500;
     }
 }
 

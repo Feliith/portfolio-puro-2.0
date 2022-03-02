@@ -5,35 +5,40 @@ const Projects = [
         tools: 'HTML5, CSS3 & JavaScript',
         id: 'html css js',
         src: '../images/projects/landing-page-puro.png',
-        url: 'https://landing-page-puro.netlify.app/'
+        url: 'https://landing-page-puro.netlify.app/',
+        code: 'https://github.com/Feliith/landing-page-pure-1.0'
     },
     {
         name: 'Mini Loja Virtual Puro',
         tools: 'HTML5, CSS3 & JavaScript',
         id: 'html css js',
         src: '../images/projects/loja-virtual-puro.png',
-        url: 'https://landing-page-puro.netlify.app/'
+        url: 'https://mini-loja-virtual.netlify.app/',
+        code: 'https://github.com/Feliith/mini-loja-virtual-puro-1.0'
     },
     {
         name: 'Formulário de LogIn Puro',
         tools: 'HTML5, CSS3 & JavaScript',
         id: 'html css js',
         src: '../images/projects/formulario-login-puro.png',
-        url: 'https://landing-page-puro.netlify.app/'
+        url: 'https://formulario-de-login-puro.netlify.app/',
+        code: 'https://github.com/Feliith/formulario-de-login-puro-1.0'
     },
     {
         name: 'Jogo da Velha Puro',
         tools: 'HTML5, CSS3 & JavaScript',
         id: 'html css js',
         src: '../images/projects/jogo-da-velha-puro.png',
-        url: 'https://landing-page-puro.netlify.app/'
+        url: 'https://jogo-da-velha-puro.netlify.app/',
+        code: 'https://github.com/Feliith/jogo-da-velha-puro-1.0'
     },
     {
         name: 'Jogo da Memória Puro',
         tools: 'HTML5, CSS3 & JavaScript',
         id: 'html css js',
         src: '../images/projects/jogo-da-memoria-puro.png',
-        url: 'https://landing-page-puro.netlify.app/'
+        url: 'https://jogo-da-memoria-puro.netlify.app/',
+        code: 'https://github.com/Feliith/jogo-da-memoria-puro-1.0'
     }
 ]
 
