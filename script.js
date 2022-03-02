@@ -1,4 +1,5 @@
 import Tools from "./data/tools.js"
+import Projects from "./data/projects.js"
 
 const sidebarClick = () => {
     const navBurger = document.querySelector('.nav-burger')
@@ -41,9 +42,8 @@ const ToolsSlider = () => {
     Tools.map((item, index) => {
         toolSlider.innerHTML += `
             <div class="tool" id="${item.id}">
-                <button class="tool-btn" style="background: ${item.color};">
+                <button class="tool-btn" style="background: linear-gradient(45deg, ${item.color}, ${item.shadow})">
                     <img src="${item.src}"/>
-                    <div class="tool-gradient"></div>
                 </button>
                 <h3 class="tool-name">${item.name}</h3>
             </div>
@@ -99,3 +99,28 @@ const ballScrolled = () => {
     }
 }
 ballScrolled()
+
+const toolSelectEvent = () => {
+    const toolButton = document.querySelectorAll('.tool-btn')
+    const toolWrap = document.querySelectorAll('.tool')
+
+    for (let i = 0 ; i < toolButton.length ; i++) {
+        toolButton[i].addEventListener('click', () => {
+            toolWrap[i].classList.toggle('on')
+            toolButton[i].classList.toggle('on')
+            toolClick()
+        })
+    }
+}
+toolSelectEvent()
+
+let toolOn = []
+
+const toolClick = () => {
+    toolOn = []
+    const toolClicked = document.querySelectorAll('.tool.on')
+    for (let i = 0 ; i < toolClicked.length ; i++) {
+        toolOn.push(toolClicked[i].getAttribute('id'))
+    }
+    console.log(toolOn)
+}
