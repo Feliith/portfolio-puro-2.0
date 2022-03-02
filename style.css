@@ -509,7 +509,7 @@ nav img {
 
 @media screen and (max-width: 600px) {
     .about {
-        height: 840px;
+        height: 700px;
         padding: 32px;
         padding-top: 20px;
         padding-bottom: 60px;
@@ -874,11 +874,13 @@ nav img {
     }
 
     .project {
-        height: 300px;
+        height: 340px;
     }
 
     .project-wrap {
         padding: 20px;
+        border-radius: 8px;
+        transform: scale(.9);
     }
 
     .project-image {
@@ -913,14 +915,13 @@ nav img {
     }
 
     .mobile-name {
-        top: 14px;
+        top: 26px;
         font-size: 24px;
         font-weight: 600;
-        text-decoration: underline;
     }
     
     .mobile-tools {
-        bottom: 14px;
+        bottom: 26px;
         color: #242424;
         font-size: 16px;
         font-weight: 500;
@@ -942,5 +943,8 @@ nav img {
         max-width: 20px;
         margin-right: 8px;
         margin-left: -8px;
+    }
+    .project-image {
+        max-height: 46%;
     }
 }
