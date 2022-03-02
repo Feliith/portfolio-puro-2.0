@@ -42,7 +42,7 @@ const ToolsSlider = () => {
     Tools.map((item, index) => {
         toolSlider.innerHTML += `
             <div class="tool" id="${item.id}">
-                <button class="tool-btn" style="background: linear-gradient(45deg, ${item.color}, ${item.shadow})">
+                <button class="tool-btn" style="background: linear-gradient(45deg, ${item.color}, ${item.shadow}); background-size: 150%;">
                     <img src="${item.src}"/>
                 </button>
                 <h3 class="tool-name">${item.name}</h3>
@@ -124,3 +124,26 @@ const toolClick = () => {
     }
     console.log(toolOn)
 }
+
+const projectsConteinerInit = () => {
+    const projectsConteiner = document.querySelector('.projects-conteiner')
+
+    Projects.map((item, index) => {
+        projectsConteiner.innerHTML += `
+            <div class="project" id="${item.id}">
+                <div class="project-wrap">
+                    <img src="${item.src}" class="project-image"/>
+                    <div class="project-items">
+                        <h3>${item.tools}</h3>
+                        <div class="project-btn-wrap">
+                            <a href="" class="project-btn"><img src="../images/site.png"/>Site</a>
+                            <a href="" class="project-btn"><img src="../images/code.png"/>Código</a>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="project-name">${item.name}</h3>
+            </div>
+        `
+    })
+}
+projectsConteinerInit()

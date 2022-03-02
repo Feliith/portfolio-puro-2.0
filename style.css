@@ -17,9 +17,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body {
     font-family: "Poppins", sans-serif;
 }
 
@@ -555,6 +552,7 @@ nav img {
     width: 100%;
     height: 240px;
     padding: 60px 80px;
+    margin-bottom: 30px;
 }
 
 .select-tool h1 {
@@ -611,7 +609,7 @@ nav img {
     cursor: pointer;
     position: relative;
     transition: .3s;
-    background-size: 200%;
+    box-shadow: 2px 2px 5px #24242460;
 }
 
 .tool-btn.on {
@@ -638,10 +636,6 @@ nav img {
     margin-top: 8px;
 }
 
-.select-project {
-    height: 500px;
-}
-
 .tool-balls {
     width: 100%;
     height: 30px;
@@ -664,6 +658,116 @@ nav img {
     background: var(--secondary-dark);
 }
 
+.projects-conteiner {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px;
+    flex-wrap: wrap;
+}
+
+.project {
+    margin: 50px;
+}
+
+.project-name {
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.project-wrap {
+    width: 100%;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 1px 1px 4px #24242460;
+}
+
+.project:hover .project-image {
+    filter: brightness(60%) blur(2px);
+}
+
+.project:hover .project-btn {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.project:hover .project-wrap h3 {
+    opacity: 1;
+}
+
+.project-image {
+    max-height: 100%;
+    border-radius: inherit;
+    transition: .5s;
+}
+
+.project-items {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.project-wrap h3 {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0;
+    transition: .3s;
+}
+
+.project-btn-wrap {
+    width: 100%;
+    height: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.project-btn {
+    background: var(--secondary);
+    color: var(--light-theme);
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    width: 86%;
+    height: 44px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(.8);
+    transition: .5s;
+}
+
+.project-btn:hover {
+    transition: .3s;
+    filter: brightness(80%);
+}
+
+
+.project-btn img {
+    max-width: 24px;
+    margin-left: -20px;
+    margin-right: 10px;
+}
+
 @media screen and (max-width: 1000px) {
     .portfolio {
         overflow: hidden;
@@ -683,6 +787,73 @@ nav img {
     .tool-slider {
         width: 1000px;
     }
+
+    .projects-conteiner {
+        padding: 130px 0;
+    }
+    .project {
+        height: 140px;
+        width: 100%;
+        margin: 30px 0;
+        position: relative;
+    }
+
+    .project:hover .project-image {
+        filter: brightness(100%) blur(0);
+    }
+
+    .project:hover .project-btn {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .project:hover .project-wrap h3 {
+        opacity: 1;
+    }
+
+    .project-wrap {
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 0;
+    }
+
+    .project-wrap h3 {
+        opacity: 1;
+        color: #000;
+        bottom: 8px;
+        position: absolute;
+        z-index: 5;
+    }
+    
+    .project-image {
+        position: relative;
+    }
+
+    .project-btn-wrap {
+        flex-direction: row;
+        margin-bottom: -4px;
+    }
+    .project-btn {
+        position: relative;
+        opacity: 1;
+        width: 160px;
+        height: 50px;
+        transform: scale(1);
+    }
+    .project-items {
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .project-name {
+        position: absolute;
+        top: -3px;
+        left: 47%;
+        font-weight: 500;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -694,5 +865,22 @@ nav img {
 @media screen and (max-width: 400px) {
     .tool-slider {
         width: 600px;
+    }
+    .project-btn {
+        font-size: 14px;
+        width: 120px;
+    }
+    .project-name {
+        left: 38%;
+    }
+    .project-btn img {
+        max-width: 22px;
+        margin-right: 8px;
+        margin-left: -8px;
+    }
+    .project-image {
+        max-width: 80%;
+        max-height: 80%;
+        border-radius: 50%;
     }
 }
