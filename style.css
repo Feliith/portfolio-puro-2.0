@@ -822,7 +822,7 @@ nav img {
         flex-direction: row;
         justify-content: space-between;
         border-radius: 0;
-        box-shadow: 0 0 3px #24242460;
+        box-shadow: 0 0 3px #242424ce;
     }
 
     .tools-name {
@@ -884,6 +884,7 @@ nav img {
     .project-image {
         border-radius: 50%;
         max-height: 60%;
+        box-shadow:  0 0 3px #24242460;
     }
     
     .project-btn-wrap {
@@ -914,7 +915,7 @@ nav img {
     .mobile-name {
         top: 14px;
         font-size: 24px;
-        font-weight: 500;
+        font-weight: 600;
         text-decoration: underline;
     }
     
