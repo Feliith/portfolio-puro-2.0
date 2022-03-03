@@ -41,10 +41,11 @@ const ToolsSlider = () => {
 
     Tools.map((item, index) => {
         toolSlider.innerHTML += `
-            <div class="tool" id="${item.id}">
-                <button class="tool-btn" style="background: linear-gradient(45deg, ${item.color}, ${item.shadow}); background-size: 150%;">
+            <div class="tool">
+                <input type="radio" name="tool" value="${item.id}" class="tool-input"/>
+                <div class="tool-btn" style="background: linear-gradient(45deg, ${item.color}, ${item.shadow}); background-size: 150%;">
                     <img src="${item.src}"/>
-                </button>
+                </div>
                 <h3 class="tool-name">${item.name}</h3>
             </div>
         `
@@ -100,62 +101,56 @@ const ballScrolled = () => {
 }
 ballScrolled()
 
-const toolSelectEvent = () => {
-    const toolButton = document.querySelectorAll('.tool-btn')
-    const toolWrap = document.querySelectorAll('.tool')
+const selectTool = () => {
+    const toolBtn = document.querySelectorAll('.tool-btn')
+    const toolInput = document.querySelectorAll('.tool-input')
 
-    for (let i = 0 ; i < toolButton.length ; i++) {
-        toolButton[i].addEventListener('click', () => {
-            toolWrap[i].classList.add('on')
-            toolClick()
+    for (let i = 0 ; i < toolBtn.length ; i++) {
+        toolBtn[i].addEventListener('click', () => {
+            let toolValue = ''
+            if (toolInput[i].checked) {
+                toolInput[i].checked = false
+                toolValue = ''
+            } else {
+                toolInput[i].checked = true
+                toolValue = toolInput[i].value
+            }
+            toolFilter(toolValue)
         })
     }
 }
-toolSelectEvent()
+selectTool()
 
-let toolOn = ''
-
-const toolClick = () => {
-    const toolClicked = document.querySelector('.tool.on')
-    toolOn = toolClicked.getAttribute('id')
-
-    toolClicked.classList.remove('on')
-
+const toolFilter = (tool) => {
     const projectsConteiner = document.querySelector('.projects-conteiner')
 
-    projectsConteiner.innerHTML = ''
-
-    if (toolOn == '') {
+    if (tool == '') {
+        projectsConteiner.innerHTML = ''
         projectsConteinerInit()
     } else {
-        projectsFilter(toolOn)
-    }
-}
-
-const projectsFilter = (tools) => {
-    Projects.map((item, index) => {
-        if (item.id.includes(tools)) {
-            const projectsConteiner = document.querySelector('.projects-conteiner')
-
-            projectsConteiner.innerHTML += `
-                <div class="project" id="${item.id}">
-                    <div class="project-wrap">
-                        <h3 class="mobile-name">${item.name}</h3>
-                        <img src="${item.src}" class="project-image"/>
-                        <div class="project-items">
-                            <h3 class="tools-name">${item.tools}</h3>
-                            <div class="project-btn-wrap">
-                                <a href="${item.url}" target="_blank" class="project-btn"><img src="../images/site.png"/>Site</a>
-                                <a href="${item.code}" target="_blank" class="project-btn"><img src="../images/code.png"/>Código</a>
+        projectsConteiner.innerHTML = ''
+        Projects.map((item, index) => {
+            if(item.id.includes(tool)) {
+                projectsConteiner.innerHTML += `
+                    <div class="project" id="${item.id}">
+                        <div class="project-wrap">
+                            <h3 class="mobile-name">${item.name}</h3>
+                            <img src="${item.src}" class="project-image"/>
+                            <div class="project-items">
+                                <h3 class="tools-name">${item.tools}</h3>
+                                <div class="project-btn-wrap">
+                                    <a href="${item.url}" target="_blank" class="project-btn"><img src="../images/site.png"/>Site</a>
+                                    <a href="${item.code}" target="_blank" class="project-btn"><img src="../images/code.png"/>Código</a>
+                                </div>
                             </div>
+                            <h3 class="mobile-tools">${item.tools}</h3>
                         </div>
-                        <h3 class="mobile-tools">${item.tools}</h3>
+                        <h3 class="project-name">${item.name}</h3>
                     </div>
-                    <h3 class="project-name">${item.name}</h3>
-                </div>
-            `
-        }
-    })
+                `
+            }
+        })
+    }
 }
 
 const projectsConteinerInit = () => {

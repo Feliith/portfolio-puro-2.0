@@ -596,6 +596,11 @@ nav img {
     align-items: center;
     justify-content: start;
     flex-direction: column;
+    position: relative;
+}
+
+.tool input {
+    transform: translateY(200%);
 }
 
 .tool-btn {
@@ -610,9 +615,10 @@ nav img {
     position: relative;
     transition: .3s;
     box-shadow: 2px 2px 5px #24242460;
+    position: absolute;
 }
 
-.tool-btn.on {
+.tool-input:checked + .tool-btn {
     transform: scale(.86);
     filter: brightness(50%);
 }
@@ -633,7 +639,8 @@ nav img {
     width: 80px;
     font-weight: 400;
     font-size: 14px;
-    margin-top: 8px;
+    position: absolute;
+    top: 80px;
 }
 
 .tool-balls {
