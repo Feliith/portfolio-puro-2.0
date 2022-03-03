@@ -106,23 +106,56 @@ const toolSelectEvent = () => {
 
     for (let i = 0 ; i < toolButton.length ; i++) {
         toolButton[i].addEventListener('click', () => {
-            toolWrap[i].classList.toggle('on')
-            toolButton[i].classList.toggle('on')
+            toolWrap[i].classList.add('on')
             toolClick()
         })
     }
 }
 toolSelectEvent()
 
-let toolOn = []
+let toolOn = ''
 
 const toolClick = () => {
-    toolOn = []
-    const toolClicked = document.querySelectorAll('.tool.on')
-    for (let i = 0 ; i < toolClicked.length ; i++) {
-        toolOn.push(toolClicked[i].getAttribute('id'))
+    const toolClicked = document.querySelector('.tool.on')
+    toolOn = toolClicked.getAttribute('id')
+
+    toolClicked.classList.remove('on')
+
+    const projectsConteiner = document.querySelector('.projects-conteiner')
+
+    projectsConteiner.innerHTML = ''
+
+    if (toolOn == '') {
+        projectsConteinerInit()
+    } else {
+        projectsFilter(toolOn)
     }
-    console.log(toolOn)
+}
+
+const projectsFilter = (tools) => {
+    Projects.map((item, index) => {
+        if (item.id.includes(tools)) {
+            const projectsConteiner = document.querySelector('.projects-conteiner')
+
+            projectsConteiner.innerHTML += `
+                <div class="project" id="${item.id}">
+                    <div class="project-wrap">
+                        <h3 class="mobile-name">${item.name}</h3>
+                        <img src="${item.src}" class="project-image"/>
+                        <div class="project-items">
+                            <h3 class="tools-name">${item.tools}</h3>
+                            <div class="project-btn-wrap">
+                                <a href="${item.url}" target="_blank" class="project-btn"><img src="../images/site.png"/>Site</a>
+                                <a href="${item.code}" target="_blank" class="project-btn"><img src="../images/code.png"/>Código</a>
+                            </div>
+                        </div>
+                        <h3 class="mobile-tools">${item.tools}</h3>
+                    </div>
+                    <h3 class="project-name">${item.name}</h3>
+                </div>
+            `
+        }
+    })
 }
 
 const projectsConteinerInit = () => {
