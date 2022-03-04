@@ -21,7 +21,7 @@ const Tools = [
         shadow: '#FFBF00'
     },
     {
-        name: 'React.js',
+        name: 'React',
         id: 'react',
         src: '../images/tools/react.png',
         color: '#61DAFB',

@@ -130,7 +130,7 @@ const toolFilter = (tool) => {
         projectsConteinerInit()
     } else {
         projectsConteiner.innerHTML = ''
-        Projects.map((item, index) => {
+        Projects[page].map((item, index) => {
             if(item.id.includes(tool)) {
                 projectsConteiner.innerHTML += `
                     <div class="project" id="${item.id}">
@@ -172,10 +172,14 @@ const nothingHere = (conteiner) => {
     `
 }
 
+let page = 0
+
 const projectsConteinerInit = () => {
     const projectsConteiner = document.querySelector('.projects-conteiner')
 
-    Projects.map((item, index) => {
+    projectsConteiner.innerHTML= ''
+
+    Projects[page].map((item, index) => {
         projectsConteiner.innerHTML += `
             <div class="project" id="${item.id}">
                 <div class="project-wrap">
@@ -196,6 +200,37 @@ const projectsConteinerInit = () => {
     })
 }
 projectsConteinerInit()
+
+const projectsPages = () => {
+    const projectsPageConteiner = document.querySelector('.projects-pages')
+
+    for (let i = 0 ; i < Projects.length ; i++) {
+        projectsPageConteiner.innerHTML += `
+            <input type="radio" name="page" value="${i}" class="project-page" />
+        `
+    }
+
+    const projectPage = document.querySelectorAll('.project-page')
+
+    for (let i = 0 ; i < projectPage.length ; i++) {
+        projectPage[i].addEventListener('click', () => {
+            pageSelect(i)
+        })
+    }
+
+    projectPage[0].checked = true
+}
+projectsPages()
+
+const pageSelect = (id) => {
+    const inputPage = document.querySelectorAll('.project-page')
+
+    let inputValue = inputPage[id].getAttribute('value')
+
+    page = inputValue
+
+    projectsConteinerInit()
+}
 
 const copyNumberBtn = () => {
     const numberBtn = document.querySelector('.copy-number')

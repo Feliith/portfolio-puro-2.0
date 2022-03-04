@@ -584,6 +584,7 @@ nav img {
     overflow-y: hidden;
     scroll-behavior: smooth;
 }
+
 .tool-scroll::-webkit-scrollbar {
     opacity: 0;
 }
@@ -666,17 +667,16 @@ nav img {
 }
 
 .projects-conteiner {
-    min-height: 500px;
+    min-height: 800px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 40px;
     margin-top: 100px;
     flex-wrap: wrap;
 }
 
 .project {
-    margin: 40px;
+    margin: 50px;
 }
 
 .project-name {
@@ -780,10 +780,21 @@ nav img {
     display: none;
 }
 
+.nothing-here {
+    position: absolute;
+    opacity: .6;
+}
+
+.nothing-here img {
+    max-width: 200px;
+}
+
+.nothing-here p {
+    font-size: 24px;
+    font-weight: 500;
+}
+
 @media screen and (max-width: 1000px) {
-    .portfolio {
-        overflow: hidden;
-    }
     .tool-slider {
         width: 1200px;
     }
@@ -799,15 +810,15 @@ nav img {
     .tool-slider {
         width: 1000px;
     }
-    .project {
-        height: 140px;
-        width: 100%;
-        margin: 30px 0;
-        position: relative;
-    }
 
-    .projects-conteiner {
-        padding: 0;
+    .tool-btn.on {
+        transform: scale(.82);
+    }
+    
+    .project {
+        height: 340px;
+        width: 400px;
+        position: relative;
     }
 
     .project:hover .project-image {
@@ -826,10 +837,12 @@ nav img {
     .project-wrap {
         width: 100%;
         height: 100%;
+        padding: 20px;
         flex-direction: row;
         justify-content: space-between;
-        border-radius: 0;
+        border-radius: 8px;
         box-shadow: 0 0 3px #242424ce;
+        transform: scale(.9);
     }
 
     .tools-name {
@@ -842,85 +855,40 @@ nav img {
     
     .project-image {
         position: relative;
-    }
-
-    .project-btn-wrap {
-        flex-direction: row;
-        margin-bottom: -4px;
-    }
-    .project-btn {
-        position: relative;
-        opacity: 1;
-        width: 160px;
-        height: 50px;
-        transform: scale(1);
-    }
-    .project-items {
-        position: relative;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-    }
-    .project-name {
-        position: absolute;
-        top: -3px;
-        left: 47%;
-        font-weight: 500;
-    }
-}
-
-.nothing-here {
-    position: absolute;
-    opacity: .6;
-}
-
-.nothing-here img {
-    max-width: 200px;
-}
-
-.nothing-here p {
-    font-size: 24px;
-    font-weight: 500;
-}
-
-@media screen and (max-width: 600px) {
-    .tool-slider {
-        width: 800px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .tool-btn.on {
-        transform: scale(.82);
-    }
-
-    .project {
-        height: 340px;
-    }
-
-    .project-wrap {
-        padding: 20px;
-        border-radius: 8px;
-        transform: scale(.9);
-    }
-
-    .project-image {
         border-radius: 50%;
-        max-height: 60%;
+        max-height: 50%;
         box-shadow:  0 0 3px #24242460;
     }
-    
+
     .project-btn-wrap {
         flex-direction: column;
         align-items: flex-end;
         justify-content: space-around;
         height: 60%;
         width: 100%;
+        margin-bottom: -4px;
     }
 
     .project-btn {
+        position: relative;
+        opacity: 1;
         width: 90%;
         height: 60px;
+        transform: scale(1);
+    }
+
+    .project-items {
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .project-name {
+        position: absolute;
+        top: -3px;
+        left: 47%;
+        font-weight: 500;
     }
 
     .project-name, .tools-name {
@@ -949,10 +917,19 @@ nav img {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .tool-slider {
+        width: 800px;
+    }
+
+}
+
 @media screen and (max-width: 400px) {
     .project {
-        height: 200;
+        width: 100%;
+        margin: 0;
     }
+
     .tool-slider {
         width: 600px;
     }
@@ -968,6 +945,7 @@ nav img {
     .project-image {
         max-height: 46%;
     }
+
 }
 
 footer {
