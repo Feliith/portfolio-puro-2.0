@@ -177,3 +177,16 @@ const projectsConteinerInit = () => {
     })
 }
 projectsConteinerInit()
+
+const copyNumberBtn = () => {
+    const numberBtn = document.querySelector('.copy-number')
+    numberBtn.onclick = () => {
+        copyNumber()
+    }
+}
+copyNumberBtn()
+
+const copyNumber = () => {
+    const numberH2 = document.querySelector('#number').textContent
+    navigator.clipboard.writeText(numberH2)
+}
