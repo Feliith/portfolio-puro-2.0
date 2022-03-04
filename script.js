@@ -116,6 +116,7 @@ const selectTool = () => {
                 toolValue = toolInput[i].value
             }
             toolFilter(toolValue)
+            nothingFilter()
         })
     }
 }
@@ -151,6 +152,24 @@ const toolFilter = (tool) => {
             }
         })
     }
+}
+
+const nothingFilter = () => {
+    const projectsQuant = document.querySelectorAll('.project')
+    const projectsConteiner = document.querySelector('.projects-conteiner')
+
+    if (projectsQuant.length == 0) {
+        nothingHere(projectsConteiner)
+    }
+}
+
+const nothingHere = (conteiner) => {
+    conteiner.innerHTML += `
+        <div class="nothing-here">
+            <img src="images/working-it.png"/>
+            <p>Trabalhando nisso...</p>
+        </div>
+    `
 }
 
 const projectsConteinerInit = () => {

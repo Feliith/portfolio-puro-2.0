@@ -869,6 +869,20 @@ nav img {
     }
 }
 
+.nothing-here {
+    position: absolute;
+    opacity: .6;
+}
+
+.nothing-here img {
+    max-width: 200px;
+}
+
+.nothing-here p {
+    font-size: 24px;
+    font-weight: 500;
+}
+
 @media screen and (max-width: 600px) {
     .tool-slider {
         width: 800px;
@@ -966,6 +980,7 @@ footer {
     text-align: center;
     padding-top: 80px;
     padding-bottom: 12px;
+    margin-top: 80px;
 }
 
 footer > h2 {
