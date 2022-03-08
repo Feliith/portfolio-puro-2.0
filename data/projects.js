@@ -9,11 +9,11 @@ const Projects = [
         code: 'https://github.com/Feliith/landing-page-pure-1.0'
     },
     {
-        name: 'Mini Loja Virtual Puro',
+        name: 'Loja Virtual Puro',
         tools: 'HTML5, CSS3 & JavaScript',
         id: 'html css js',
         src: '../images/projects/loja-virtual-puro.png',
-        url: 'https://mini-loja-virtual.netlify.app/',
+        url: 'https://loja-virtual-puro.netlify.app/',
         code: 'https://github.com/Feliith/mini-loja-virtual-puro-1.0'
     },
     {
