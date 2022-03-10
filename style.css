@@ -822,7 +822,7 @@ nav img {
     
     .project {
         height: 340px;
-        width: 400px;
+        width: 540px;
         position: relative;
     }
 
@@ -923,6 +923,9 @@ nav img {
 }
 
 @media screen and (max-width: 600px) {
+    .project {
+        width: 100%;
+    }
     .tool-slider {
         width: 800px;
     }
