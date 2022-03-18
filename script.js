@@ -179,7 +179,7 @@ const projectsConteinerInit = () => {
 
     projectsConteiner.innerHTML= ''
 
-    Projects[page].map((item, index) => {
+    Projects.map((item, index) => {
         projectsConteiner.innerHTML += `
             <div class="project" id="${item.id}">
                 <div class="project-wrap">
@@ -187,7 +187,7 @@ const projectsConteinerInit = () => {
                     <img src="${item.src}" class="project-image"/>
                     <div class="project-items">
                         <h3 class="tools-name">${item.tools}</h3>
-                        <div class="project-btn-wrap">
+                        <div class="project-btn-wrap" id="btn${index}">
                             <a href="${item.url}" target="_blank" class="project-btn"><img src="../images/site.png"/>Site</a>
                             <a href="${item.code}" target="_blank" class="project-btn"><img src="../images/code.png"/>Código</a>
                         </div>
@@ -200,6 +200,7 @@ const projectsConteinerInit = () => {
     })
 }
 projectsConteinerInit()
+
 
 const projectsPages = () => {
     const projectsPageConteiner = document.querySelector('.projects-pages')

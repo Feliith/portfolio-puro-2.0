@@ -799,6 +799,16 @@ nav img {
     font-weight: 500;
 }
 
+.project-page {
+    display: none;
+}
+
+
+/* not done */
+.project-btn-wrap#btn7 > a:first-child {
+    display: none;
+}
+
 @media screen and (max-width: 1000px) {
     .tool-slider {
         width: 1200px;

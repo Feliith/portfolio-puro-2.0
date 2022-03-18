@@ -1,6 +1,6 @@
 
 const Projects = [
-    [{
+    {
         name: 'Landing Page Puro',
         tools: 'HTML5, CSS3 & JavaScript',
         id: 'html css js',
@@ -46,8 +46,24 @@ const Projects = [
         id: 'react',
         src: '../images/projects/portfolio-react.png',
         url: 'https://f-portfolio-reactjs.netlify.app/',
-        code: 'https://github.com/Feliith/landing-page-pure-1.0'
-    }]
+        code: 'https://f-portfolio-reactjs.netlify.app/'
+    },
+    {
+        name: 'Landing Page React <br>[ Em desenvolvimento ]',
+        tools: 'React',
+        id: 'react',
+        src: '../images/projects/landing-page-react.png',
+        url: 'https://f-portfolio-reactjs.netlify.app/',
+        code: 'https://github.com/Feliith/landing-page-react-1.0'
+    },
+    {
+        name: 'Réplica Shopee <br>[ Em desenvolvimento ]',
+        tools: 'React',
+        id: 'react',
+        src: '../images/projects/shopee-logo.png',
+        url: '',
+        code: 'https://github.com/Feliith/shopee-replica-react-1.0'
+    }
 ]
 
 export default Projects
