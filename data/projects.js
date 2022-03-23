@@ -49,20 +49,12 @@ const Projects = [
         code: 'https://f-portfolio-reactjs.netlify.app/'
     },
     {
-        name: 'Landing Page React <br>[ Em desenvolvimento ]',
+        name: 'Landing Page React',
         tools: 'React',
         id: 'react',
         src: '../images/projects/landing-page-react.png',
         url: 'https://f-portfolio-reactjs.netlify.app/',
         code: 'https://github.com/Feliith/landing-page-react-1.0'
-    },
-    {
-        name: 'Réplica Shopee <br>[ Em desenvolvimento ]',
-        tools: 'React',
-        id: 'react',
-        src: '../images/projects/shopee-logo.png',
-        url: '',
-        code: 'https://github.com/Feliith/shopee-replica-react-1.0'
     }
 ]
 
