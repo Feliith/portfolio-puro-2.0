@@ -26,13 +26,6 @@ const Tools = [
         src: '../images/tools/react.png',
         color: '#61DAFB',
         shadow: '#007E9E'
-    },
-    {
-        name: 'Styled Components',
-        id: 'styled',
-        src: '../images/tools/styled.png',
-        color: '#121212',
-        shadow: '#323232'
     }
 ]
 

@@ -120,7 +120,6 @@ const selectTool = () => {
         })
     }
 }
-selectTool()
 
 const toolFilter = (tool) => {
     const projectsConteiner = document.querySelector('.projects-conteiner')

@@ -570,6 +570,7 @@ nav img {
     font-weight: 300;
     color: var(--light-theme-hover);
     margin-bottom: 50px;
+    opacity: 0;
 }
 
 .select-tool h1 strong {
@@ -800,12 +801,6 @@ nav img {
 }
 
 .project-page {
-    display: none;
-}
-
-
-/* not done */
-.project-btn-wrap#btn7 > a:first-child {
     display: none;
 }
 

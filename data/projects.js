@@ -55,6 +55,14 @@ const Projects = [
         src: '../images/projects/landing-page-react.png',
         url: 'https://f-portfolio-reactjs.netlify.app/',
         code: 'https://github.com/Feliith/landing-page-react-1.0'
+    },
+    {
+        name: 'Calculadora React',
+        tools: 'React',
+        id: 'react',
+        src: '../images/projects/calculadora-react.png',
+        url: 'https://f-calculadora-react.netlify.app/',
+        code: 'https://github.com/Feliith/calculadora-react-1.0'
     }
 ]
 
