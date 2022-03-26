@@ -29,7 +29,7 @@ body {
     flex-direction: column;
     border-radius: 12px;
     width: 300px;
-    height: 440px;
+    height: 400px;
 }
 
 h1 {
@@ -49,18 +49,19 @@ img:hover {
     transform: scale(.96);
 }
 
-button {
+a:last-child {
     background: #ff5b5b;
     color: #fff;
     font-size: 18px;
-    font-weight: 300;
-    padding: 12px 42px;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 10px 42px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: .3s;
 }
 
-button:hover {
+a:last-child:hover {
     filter: brightness(80%);
 }
