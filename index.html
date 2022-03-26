@@ -4,124 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <nav>
-        <div class="nav-logo">
-            <a href="#home" class="nav-logo-wrap">
-                <img src="images/felipe-r.png" alt="Fe Logo">
+    <div class="new-portfolio">
+        <div class="card">
+            <h1>Novo Portfólio:</h1>
+            <a href="https://f-portfolio-reactjs.netlify.app/">
+                <img src="images/projects/portfolio-react.png" alt="Porfolio React">
             </a>
-        </div>
-        <button class="nav-burger">
-            <img src="images/burger-bar.png" alt="Navbar Menu">
-        </button>
-    </nav>
-    <div class="sidebar" onclick="sidebarToggle()">
-        <button class="sidebar-close">
-            <img src="images/close.png" alt="Sidebar Sair">
-        </button>
-        <div class="sidebar-links">
-            <a href="#home">Início</a>
-            <a href="#about">Quem sou</a>
-            <a href="#portfolio">Portfólio</a>
-            <a href="#contacts">Contatos</a>
+            <button>Abrir</button>
         </div>
     </div>
-
-    <div class="home" id="home">
-        <div class="home-bg">
-            <video src="videos/videobg.mp4" autoplay muted loop class="home-bg-video"></video>
-            <div class="home-bg-cover"></div>
-        </div>
-
-        <div class="home-content">
-            <div class="home-contacts">
-                <div class="social-media">
-                    <a href="https://github.com/Feliith" target="_blank"><img src="images/github.png" alt="GitHub Logo"></a>
-                    <a href="https://www.linkedin.com/in/felipe-robles-26708b212/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn Logo"></a>
-                    <a href="https://www.instagram.com/feliith/" target="_blank"><img src="images/instagram.png" alt="Instagram Logo"></a>
-                </div>
-                <div class="phone-number">
-                    <a href="https://wa.me/5535998581910" target="_blank"><img src="images/whatsapp.png" alt="WhatsApp Logo"></a>
-                    <h2>(35) 99858-1910</h2>
-                </div>
-            </div>
-
-            <div class="home-menu">
-                <a href="#home">Início</a>
-                <a href="#about">Sobre mim</a>
-                <a href="https://www.javascript.com/" target="_blank" class="js-logo"><img src="images/html-css-js.png" alt="JavaScript Logo"></a>
-                <a href="#portfolio">Portfólio</a>
-                <a href="#contacts">Contatos</a>
-            </div>
-
-            <div class="home-text">
-                <a href="https://www.javascript.com/" target="_blank" class="js-mobile"><img src="images/html-css-js.png" alt="JavaScript Logo"></a>
-                <div class="home-text-bg"></div>
-                <h1>Welcome to my Portfolio!</h1>
-                <p>Este é o meu <strong>Portfólio!</strong> Aqui você verá todos os meus projetos organizados pela ferramenta que eles foram feitos.</p>
-                <p>Arrasta pra cima e veja! ;)</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="about" id="about">
-        <div class="about-quote">
-            <h2>Citação</h2>
-            <p>
-                <img src="images/quote.png">
-                Meu pequeno computador disse uma coisa tão engraçada esta manhã.
-                <img src="images/quote.png">
-            </p>
-            <h2>- Alan Turing</h2>
-        </div>
-        <div class="about-image">
-            <img src="images/felipe.png" alt="Felipe @feliith">
-            <a href="https://www.instagram.com/feliith/" target="_blank"></a>
-        </div>
-        <div class="about-text">
-            <h2>Olá,</h2>
-            <p>sou Felipe Robles, desenvolvedor Front-End iniciante. Estudando independente com sede de conhecimento e experiência. Sempre curioso em busca de aprender novas ferramentas e formas de utilizá-las.</p>
-        </div>
-    </div>
-
-    <div class="portfolio" id="portfolio">
-        <div class="select-tool">
-            <h1>My <strong>Portolio:</strong></h1>
-            <h3>Selecione uma ferramenta:</h3>
-            <div class="tool-scroll">
-                <div class="tool-slider"></div>
-            </div>
-            <div class="tool-balls">
-                <div class="ball on"></div>
-                <div class="ball"></div>
-            </div>
-        </div>
-        <div class="projects-conteiner"></div>
-        <div class="projects-pages"></div>
-    </div>
-
-    <footer id="contacts">
-        <h2>Se gostou do meu trabalho, e tem interesse em contratar meus serviços, entre em contado comigo em alguma dessas redes sociais:</h2>
-        <div class="footer-contacts">
-            <div class="social-media footer">
-                <a href="https://github.com/Feliith" target="_blank"><img src="images/github.png" alt="GitHub Logo"><p>Github</p></a>
-                <a href="https://www.linkedin.com/in/felipe-robles-26708b212/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn Logo"><p>LinkedIn</p></a>
-                <a href="https://www.instagram.com/feliith/" target="_blank"><img src="images/instagram.png" alt="Instagram Logo"><p>Instagram</p></a>
-            </div>
-            <div class="phone-number-wrap footer">
-                <div class="phone-number footer">
-                    <a href="https://wa.me/5535998581910" target="_blank"><img src="images/whatsapp.png" alt="WhatsApp Logo"></a>
-                    <h2 id="number">(35) 99858-1910</h2>
-                </div>
-                <button class="copy-number">Copiar número <img src="images/link.png"></button>
-            </div>
-        </div>
-        <a href="https://www.instagram.com/feliith/" target="_blank">@feliith</a>
-    </footer>
-<script type="module" src="script.js"></script>
 </body>
 </html>
